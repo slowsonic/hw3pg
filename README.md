@@ -13,6 +13,7 @@ User selects which criteria to include in the password:
 - uppercase letters
 - numbers
 - special characters
+
   Each criteria presented as a prompt.
   User's input must be validated and at least one criteria and a length of the password must be 8 - 128 symbols.
   Password must be written to the page when all prompts are answered.
