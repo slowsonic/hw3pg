@@ -18,7 +18,9 @@ User selects which criteria to include in the password:
   User's input must be validated and at least one criteria and a length of the password must be 8 - 128 symbols.
   Password must be written to the page when all prompts are answered.
 
-Screenshot: ??????????
+## Demo
+
+![The generator meets criteria](./assets/demo.gif)
 
 # Links to Application
 

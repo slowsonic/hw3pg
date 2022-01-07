@@ -13,12 +13,6 @@ let specChar = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".",
 // this variable will contain user's data for a password
 let pdLength = "";
 
-// variables for user's criterias
-let addLcLetter;
-let addUcLetter;
-let addNumber;
-let addSpecChar;
-
 // ask user how many symbols should be in the password
 function generatePassword() {
   let pdLength = prompt("Enter a number of symbols between 8 and 128");
@@ -28,13 +22,23 @@ function generatePassword() {
     alert("Try again!");
     return null;
   }
-  // if user enters not a numeric symbol - ASK TUTOR
-  // if (prompt isNaN) alert("Must be a number!"); return null;
+  // if user enters not a numeric symbol
+  var isN = isNaN(pdLength);
+  if (isN) {
+    alert("must be a number!");
+    return null;
+  }
+
+  if (isNaN(pdLength)) {
+    alert("must be a number!");
+    return null;
+  }
 
   // this should make user to select a proper lenght
   if (pdLength < 8 || pdLength > 128) {
     alert("If it is less than 8 or greater than 128, it is not going to work!");
     pdLength = prompt("Enter number of symbols between 8 and 128");
+    return null;
   }
 
   // user confirms desired criteria
@@ -53,7 +57,7 @@ function generatePassword() {
     addUcLetter = confirm("Add uppercase letters?");
   }
 
-  // New variable for saving user's input
+  // New variable for saving user's input as an array
   let userPassword = [];
   // IF user decides to use lowercase letters in the userPassword
   if (addLcLetter) {
